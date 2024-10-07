@@ -2,10 +2,12 @@ import React from "react";
 import logo from "./logo.svg";
 import smth from "./smth.png";
 import "./App.css";
+import Home from "./pages/home/Home";
 
 function App() {
   return (
     <div className="App">
+      <Home />
       <header className="App-header">
         <img src={smth} className="App-logo" alt="logo" />
         <p>
