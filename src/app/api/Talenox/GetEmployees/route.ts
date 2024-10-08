@@ -5,6 +5,7 @@ export async function GET() {
   try {
     // Fetch data from the external API
     const response = await fetch("https://api.talenox.com/api/v2/employees", {
+      mode: "no-cors",
       method: "GET",
       headers: {
         "Content-Type": "application/json",
