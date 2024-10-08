@@ -4,6 +4,8 @@ import styles from "./page.module.css";
 
 export default function Home() {
   const [isAuthorized, setIsAuthorized] = useState(false);
+  const [authCode, setAuthCode] = useState("");
+
   const getEmployees = async () => {
     try {
       const response = await fetch(
@@ -32,7 +34,7 @@ export default function Home() {
             "Content-Type": "application/json",
           },
           body: JSON.stringify({
-            code: localStorage.getItem("token"),
+            code: authCode,
           }),
         }
       );
@@ -51,6 +53,7 @@ export default function Home() {
       const urlParams = new URLSearchParams(window.location.search);
       const code = urlParams.get("code");
       if (!code) return;
+      setAuthCode(code);
       getAccessToken();
       setIsAuthorized(true);
     }
