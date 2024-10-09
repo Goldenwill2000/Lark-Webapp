@@ -9,7 +9,7 @@ export async function POST(NextRequest: NextRequest) {
   try {
     // Fetch data from the external API
     const response = await fetch(
-      `https://app.talenox.com/oauth/token?grant_type=authorization_code&code=${code}&client_id=${process.env.NEXT_PUBLIC_TALENOX_CLIENT_UID}&client_secret=${process.env.NEXT_PUBLIC_TALENOX_CLIENT_SECRET}&redirect_uri=${process.env.NEXT_PUBLIC_TALENOX_REDIRECT_URI}`,
+      `https://app.talenox.com/oauth/token?grant_type=authorization_code&code=${code}&client_id=${process.env.TALENOX_CLIENT_UID}&client_secret=${process.env.TALENOX_CLIENT_SECRET}&redirect_uri=${process.env.TALENOX_REDIRECT_URI}`,
       {
         mode: "no-cors",
         method: "POST",

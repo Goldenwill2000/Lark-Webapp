@@ -5,13 +5,14 @@ export const debugPrint = (...args: any) => {
 };
 
 export const isDev = () => {
+  console.log(process.env.NODE_ENV);
   return !process.env.NODE_ENV || process.env.NODE_ENV === "development";
 };
 
 export const getEndpoint = () => {
   if (isDev()) {
-    return process.env.NEXT_PUBLIC_LOCAL_ENDPOINT;
+    return process.env.LOCAL_ENDPOINT;
   } else {
-    return process.env.NEXT_PUBLIC_SERVER_ENDPOINT;
+    return process.env.SERVER_ENDPOINT;
   }
 };
