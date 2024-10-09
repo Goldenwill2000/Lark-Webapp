@@ -27,7 +27,7 @@ export default function Home() {
       return;
     }
 
-    window.location.href = APIPaths.talenoxOAuth2Endpoint;
+    // window.location.href = APIPaths.talenoxOAuth2Endpoint;
     // window.location.href = APIPaths.larkOAuth2Endpoint;
   }, []);
 
