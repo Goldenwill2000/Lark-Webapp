@@ -13,13 +13,7 @@ export const APIPaths = {
 
   //TALENOX API
   talenoxEndpoint: "https://api.talenox.com/api/v2/",
-  talenoxOAuth2Endpoint: `https://app.talenox.com/oauth/authorize?client_id=${
-    process.env.NEXT_PUBLIC_TALENOX_CLIENT_UID
-  }&response_type=code&redirect_uri=${
-    isDev()
-      ? process.env.NEXT_PUBLIC_TALENOX_REDIRECT_URI_MOCK
-      : process.env.NEXT_PUBLIC_TALENOX_REDIRECT_URI
-  }&scope=profile&response_type=code`,
+  talenoxOAuth2Endpoint: `https://app.talenox.com/oauth/authorize?client_id=${process.env.NEXT_PUBLIC_TALENOX_CLIENT_UID}&response_type=code&redirect_uri=${process.env.NEXT_PUBLIC_TALENOX_REDIRECT_URI}&scope=profile&response_type=code`,
 
   talenoxGetEmployees: "employees",
   talenoxGetAccessToken: "access_token",
