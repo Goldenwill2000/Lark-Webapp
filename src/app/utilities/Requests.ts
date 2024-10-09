@@ -75,7 +75,7 @@ const constructTarget = (
   params?: string | string[],
   query?: Record<string, any> | string
 ) => {
-  let target = `${getEndpoint()}${path}`;
+  let target = `${process.env.NEXT_PUBLIC_SERVER_ENDPOINT}${path}`;
   console.log(target);
 
   if (params) {
